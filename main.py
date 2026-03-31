@@ -78,12 +78,11 @@ if uploaded_files:
         # =====================
 
         date_cols = ['Tgl Kejadian', 'Tgl Lapor']
-
         for col in date_cols:
             merged_df[col] = pd.to_datetime(
                 merged_df[col],
-                format='%d/%m/%y',
-                errors='coerce'
+                errors='coerce',
+                dayfirst=True
             ).dt.date
 
         time_cols = ['Jam Kejadian', 'Jam Lapor']
