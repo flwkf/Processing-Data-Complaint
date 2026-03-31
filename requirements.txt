@@ -1,5 +1,7 @@
+streamlit
 pandas
 numpy
-streamlit
 openpyxl
 xlrd
+lxml
+html5lib
