@@ -105,7 +105,10 @@ if uploaded_files:
         # TAMBAHAN KOLOM
         # =====================
 
-        merged_df['Tanggal penarikan data CRC'] = pd.Timestamp.now(tz='Asia/Jakarta')
+        merged_df['Tanggal penarikan data CRC'] = (
+    pd.Timestamp.now(tz='Asia/Jakarta')
+    .tz_localize(None)
+)
 
         merged_df['Bulan'] = (
             merged_df['Tgl Lapor'].dt.to_period('M').dt.to_timestamp())
