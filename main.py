@@ -40,10 +40,11 @@ if uploaded_files:
                 df = pd.read_html(io.StringIO(decoded))[0]
             else:
                 st.write(f"📄 {file.name} → Excel")
-                df = pd.read_excel(io.BytesIO(content), header=None, engine="xlrd")
-
-            if df.empty:
-                continue
+            
+                if file.name.endswith(".xls"):
+                    df = pd.read_excel(io.BytesIO(content), header=None, engine="xlrd")
+                else:
+                    df = pd.read_excel(io.BytesIO(content), header=None, engine="openpyxl")
 
             # Set header
             new_header = df.iloc[0]
