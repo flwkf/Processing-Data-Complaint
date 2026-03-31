@@ -105,12 +105,11 @@ if uploaded_files:
         # TAMBAHAN KOLOM
         # =====================
 
-        merged_df['Tanggal penarikan data CRC'] = pd.Timestamp.now().normalize()
+        merged_df['Tanggal penarikan data CRC'] = pd.Timestamp.now().normalize() +
+            pd.to_timedelta(datetime.now().strftime('%H:%M:%S')
 
         merged_df['Bulan'] = (
-            merged_df['Tgl Lapor'].dt.to_period('M').dt.to_timestamp() +
-            pd.to_timedelta(datetime.now().strftime('%H:%M:%S'))
-        )
+            merged_df['Tgl Lapor'].dt.to_period('M').dt.to_timestamp())
 
         merged_df['Tanggal'] = merged_df['Tgl Lapor'].dt.day
 
