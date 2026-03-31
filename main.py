@@ -136,6 +136,7 @@ if uploaded_files:
         st.success("✅ Data berhasil diproses!")
 
         st.subheader("Preview Data")
+        st.markdown(f"Total Komplain: {len(merged_df)}")
         st.dataframe(merged_df, use_container_width=True)
 
         # COPYABLE TABLE
