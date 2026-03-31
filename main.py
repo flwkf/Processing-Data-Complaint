@@ -107,7 +107,7 @@ if uploaded_files:
     .tz_localize(None)
 )
 
-        merged_df['Bulan'] = (merged_df['Tgl Lapor'].dt.to_period('M').dt.to_timestamp())
+        merged_df['Bulan'] = (merged_df['Tgl Lapor'].dt.to_period('M').dt.to_timestamp()).dt.date
 
         merged_df['Tanggal'] = merged_df['Tgl Lapor'].dt.day
 
