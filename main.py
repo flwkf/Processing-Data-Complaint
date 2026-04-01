@@ -105,6 +105,7 @@ if uploaded_files:
         merged_df['Tanggal penarikan data CRC'] = (
     pd.Timestamp.now(tz='Asia/Jakarta')
     .tz_localize(None)
+    .strftime('%d/%m/%Y %H:%M:%S')
 )
 
         merged_df['Bulan'] = (merged_df['Tgl Lapor'].dt.to_period('M').dt.to_timestamp()).dt.date
@@ -127,7 +128,7 @@ if uploaded_files:
         merged_df['Kategori'] = merged_df['Kategori'].str.upper()
 
         for col in date_cols:
-            merged_df[col] = merged_df[col].dt.date
+            merged_df[col] = merged_df[col].dt.strftime('%d/%m/%Y')
 
         # =====================
         # OUTPUT
