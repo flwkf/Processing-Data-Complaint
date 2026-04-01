@@ -108,8 +108,12 @@ if uploaded_files:
     .strftime('%d/%m/%Y %H:%M:%S')
 )
 
-        merged_df['Bulan'] = (merged_df['Tgl Lapor'].dt.to_period('M').dt.to_timestamp()).dt.date
-        merged_df['Bulan'] = (merged_df['Bulan']).strftime('%d/%m/%Y')
+        merged_df['Bulan'] = (
+    merged_df['Tgl Lapor']
+    .dt.to_period('M')
+    .dt.to_timestamp()
+    .dt.strftime('%d/%m/%Y')
+)
 
         merged_df['Tanggal'] = merged_df['Tgl Lapor'].dt.day
 
