@@ -120,14 +120,45 @@ pd.concat()
 
 ---
 
-## 💡 Use Case
+## 🎯 Kegunaan
 
-Cocok untuk:
+Aplikasi ini digunakan untuk menggabungkan dan merapikan data komplain dari berbagai file menjadi satu dataset yang siap dianalisis.
 
-* Tim operasional
-* Monitoring komplain customer
-* Reporting bulanan
-* Data cleaning cepat tanpa coding manual
+Secara praktis, aplikasi ini membantu:
+
+* Menggabungkan banyak file laporan komplain
+* Membersihkan dan merapikan format data
+* Menyamakan format tanggal, waktu, dan angka
+* Menambahkan informasi tambahan (bulan, tanggal, kategori)
+* Menyediakan output siap pakai untuk analisis
+
+---
+
+## 💡 Manfaat
+
+### 1. Hemat Waktu
+
+Proses merge dan cleaning dilakukan otomatis tanpa perlu manual di Excel.
+
+### 2. Mengurangi Human Error
+
+Menghindari kesalahan seperti salah copy data atau format yang tidak konsisten.
+
+### 3. Data Lebih Rapi & Konsisten
+
+Semua data memiliki format yang sama sehingga mudah dianalisis.
+
+### 4. Siap untuk Analisis & Reporting
+
+Hasil data bisa langsung digunakan untuk dashboard, laporan, atau analisis lanjutan.
+
+### 5. Mempermudah Monitoring Komplain
+
+Dengan tambahan kolom seperti Bulan, Tanggal, dan Kategori, analisis tren jadi lebih mudah.
+
+### 6. Fleksibel
+
+Mendukung berbagai format file (Excel dan HTML).
 
 ---
 
