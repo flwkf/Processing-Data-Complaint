@@ -2,6 +2,8 @@
 
 Aplikasi berbasis **Streamlit** untuk menggabungkan (merge) dan memproses data komplain dari berbagai file (Excel & HTML) secara otomatis.
 
+<img width="1919" height="916" alt="image" src="https://github.com/user-attachments/assets/4523aad4-0382-41c1-8010-44899bfd3a9d" />
+
 ---
 
 ## 🚀 Fitur Utama
